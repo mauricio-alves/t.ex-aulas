@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 01</title>
+</head>
+
+<body>
+  <h1>Exercício 01</h1>
+</body>
+<script>
+  let nome = 'Elvis Presley'
+  nome === 'Elvis Presley' ? console.log(`Hello ${nome}`) : console.log(`You're not Elvis`)
+
+  // -----------------------------------
+
+  let level = 0
+  let profile
+
+  switch (level) {
+    case 0:
+      profile = 'Basic'
+      break;
+
+    case 1:
+      profile = 'Intermediary'
+      break;
+
+    case 2:
+      profile = 'Advanced'
+      break;
+
+    default:
+      profile = 'Level does not match.'
+      break;
+  }
+  console.log(`Level ${level}: ${profile}`)
+
+  // -----------------------------------
+
+  function saudacao(user, dayOfTheWeek) {
+    return `Hello ${user}, today is ${dayOfTheWeek}.`
+  }
+
+  console.log(saudacao('Mauricio Alves', 'Thursday'))
+
+  // -----------------------------------
+
+  let animals = ['Elefante', 'Girafa', 'Leão', 'Hipopótamo']
+  for (let i = 0; i < animals.length; i++) {
+    console.log(animals[i])
+  }
+
+</script>
+
+</html>
