@@ -6,22 +6,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML5 - Aulas</title>
+
+  <style>
+    body {
+      width: 80%;
+      margin: auto;
+      font-size: 1.3em;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      line-height: 1.3em;
+      border: 1px dotted #ccc;
+      padding: 10px;
+    }
+
+    figure {
+      padding: 20px;
+    }
+
+    header * {
+      font-size: 2em;
+      font-weight: 700;
+    }
+
+    header img {
+      width: 80px;
+    }
+
+    audio {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1>Sobre Nosso Restaurante</h1>
+    <img src="../images/svg/cenoura.svg" alt="imagem de uma cenoura" width="30" />
+    <span>Nosso Restaurante</span>
+    <hr />
+    <audio src="../audio/inspiring.mp3" type="audio/mp3" controls></audio>
+    <br />
+    <video width="60%" autoplay muted controls>
+      <source src="../videos/refeicao.mp4" type="video/mp4" />
+      <source src="../videos/refeicao.webm" type="video/webm" />
+    </video>
   </header>
   <nav><span>Barra de navegação</span>
     <br />
-    <a target="_blank" href="https://www.google.com/search?q=zoologico">GOOGLE</a>
-    <a href="#carnes">Carnes Nobres</a>
-    <a href="../index.html">Início</a>
+    <a target="_blank" href="https://www.google.com/search?q=zoologico">GOOGLE</a> |
+    <a href="#carnes">Carnes Nobres</a> |
+    <a href="../index.html">Início</a> |
+    <a href="#contato">Contato</a>
   </nav>
   <main>
     <section>
       <article>
-        <h2>Nosso Compromisso</h2>
+        <h2>Sobre Nosso Compromisso</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore distinctio nam rerum asperiores. Corporis
           inventore natus quae tempora incidunt iure molestiae enim laborum facere quam cum nisi dolore totam dolorum id
           at recusandae amet earum facilis repellendus iste, doloremque accusamus vero reiciendis! Ipsa temporibus
@@ -41,6 +80,14 @@
           <li>Caldos</li>
           <li>Frutos do Mar</li>
         </ol>
+      </article>
+      <hr />
+      <article>
+        <nav>
+          <a href="cozinha_01.html" target="cozinha">Tudo altamente selecionado.</a>
+          <a href="cozinha_02.html" target="cozinha">Conheça nosso espeto de vegetais.</a>
+        </nav>
+        <iframe src="cozinha_01.html" frameborder="0" width="80%" height="900" name="cozinha"></iframe>
       </article>
       <hr />
       <article>
@@ -82,6 +129,31 @@
         </pre>
       </article>
       <hr />
+      <article id="contato">
+        <h2>Deixe aqui seu recado.</h2>
+        <form action="" method="get">
+          <fieldset>
+            <legend>Preencha todos os campos:</legend>
+            <ul>
+              <li>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required />
+              </li>
+              <li>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+              </li>
+              <li>
+                <label for="convidados">Convidados:</label>
+                <input type="number" id="convidados" name="convidados" min="1" max="10" required />
+              </li>
+              <li>
+                <button>Confirmar</button>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </article>
       <article id="carnes">
         <h2>Carnes Nobres</h2>
         <p>Lorem ipsum dolor sit amet <em>consectetur adipisicing elit.</em> Earum, doloribus non hic deserunt error
@@ -115,6 +187,7 @@
       </article>
     </section>
   </main>
+  <hr />
   <footer>
     <a href="../index.html#carnes"> <img src="../images/here-take-a-look-at-our-menu.jpg"
         alt="imagem de clientes no restaurante" width="150px" title="conheça nosso menu"></a>

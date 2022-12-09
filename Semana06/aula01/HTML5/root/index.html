@@ -6,12 +6,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML5 - Aulas</title>
+
+  <style>
+    body {
+      width: 80%;
+      margin: auto;
+      font-size: 1.3em;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      line-height: 1.3em;
+      border: 1px dotted #ccc;
+      padding: 10px;
+    }
+
+    figure {
+      padding: 20px;
+    }
+
+    header * {
+      font-size: 2em;
+      font-weight: 700;
+    }
+
+    header img {
+      width: 80px;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1>Nosso Restaurante</h1>
+    <img src="./images/svg/cenoura.svg" alt="imagem de uma cenoura" width="30" />
+    <span>Nosso Restaurante</span>
   </header>
+  <hr />
   <nav><span>Barra de navegação</span>
     <br />
     <a target="_blank" href="https://www.google.com/search?q=zoologico">GOOGLE</a>
@@ -20,6 +47,7 @@
   </nav>
   <main>
     <section>
+      <h1>Reinventando o sabor</h1>
       <article>
         <h2>Artigo 1</h2>
         <p>Aulas de <code>&lt;html&gt;</code>. Dolor sit amet <mark>consectetur adipisicing elit.</mark> Earum,
@@ -27,26 +55,28 @@
           asperiores vel atque tenetur, <br /> odit iusto harum quidem velit.
         </p>
         <h3>Nossos pratos:</h3>
-        <figure>
-          <blockquote>
-            <h4>Frutas e Vegetais</h4>
-            <img src="./images/frutas-e-vegetais.jpg" alt="imagem de frutas e vegetais" width="450px" />
-            <figcaption>Tela: Fotografia de Alex H. S.</figcaption>
+        <figure style="background-color: antiquewhite;">
+          <h4>Frutas e Vegetais</h4>
+          <img src="./images/frutas-e-vegetais.jpg" alt="imagem de frutas e vegetais" width="450px" />
+          <img src="./images/png/caixa-macas.png " alt="imagem de caixa de maçãs" width="200px" />
+          <figcaption>Tela: Fotografia de Alex H. S.</figcaption>
         </figure>
-        <details>
-          <summary>
-            <b>Saiba mais sobre o nosso cardápio.</b>
-          </summary>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, animi id! Distinctio est sint voluptatibus
-            at laboriosam! Possimus incidunt inventore vitae recusandae id quam in, repudiandae distinctio quis
-            blanditiis sapiente.</p>
-          <img src="./images/bg_500.jpg" alt="desenho em preto e branco de vários alimentos" width="300" />
-          <ul>
-            <li>Lanches</li>
-            <li>Beitures</li>
-            <li>Pizzas</li>
-          </ul>
-          </blockquote>
+        <blockquote>
+          <details>
+            <summary>
+              <b>Saiba mais sobre o nosso cardápio.</b>
+            </summary>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, animi id! Distinctio est sint
+              voluptatibus
+              at laboriosam! Possimus incidunt inventore vitae recusandae id quam in, repudiandae distinctio quis
+              blanditiis sapiente.</p>
+            <img src="./images/bg_500.jpg" alt="desenho em preto e branco de vários alimentos" width="300" />
+            <ul>
+              <li>Lanches</li>
+              <li>Beitures</li>
+              <li>Pizzas</li>
+            </ul>
+        </blockquote>
         </details>
         <p>Escolha suas opções de massa <abbr title="Tipo de cozimento mais consistente">Al dente</abbr></p>
         <p><bdo dir="rtl">Não perca nossa semana gourmet!</bdo></p>
@@ -130,6 +160,7 @@
           quasi optio dolorem consequatur dignissimos molestias, unde asperiores vel atque tenetur, odit iusto harum
           quidem velit.
         </p>
+        <img src="./images/gif/cooking.gif" alt="gif de cozimento" />
         <p>Lorem ipsum dolor sit amet <em>consectetur adipisicing elit.</em> Earum, doloribus non hic deserunt error
           quasi optio dolorem consequatur dignissimos molestias, unde asperiores vel atque tenetur, odit iusto harum
           quidem velit.
@@ -141,6 +172,7 @@
       </article>
     </section>
   </main>
+  <hr />
   <footer>
     <p>&copy;2045 - Todos os direitos reservados.</p>
     <pre>
