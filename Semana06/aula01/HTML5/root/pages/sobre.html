@@ -35,6 +35,10 @@
       margin-top: 20px;
       margin-bottom: 20px;
     }
+
+    select {
+      font-size: 0.88em;
+    }
   </style>
 </head>
 
@@ -131,27 +135,98 @@
       <hr />
       <article id="contato">
         <h2>Deixe aqui seu recado.</h2>
-        <form action="" method="get">
+        <form action="" method="post" enctype="multipart/form-data">
           <fieldset>
             <legend>Preencha todos os campos:</legend>
             <ul>
               <li>
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required />
+                <input type="text" id="nome" name="nome" maxlength="30" size="50" autofocus required />
               </li>
               <li>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+                <input type="email" id="email" name="email" size="50" placeholder="Digite seu email" required />
               </li>
               <li>
                 <label for="convidados">Convidados:</label>
-                <input type="number" id="convidados" name="convidados" min="1" max="10" required />
+                <input type="number" id="convidados" name="convidados" min="1" max="10" value="10" readonly required />
+              </li>
+              <hr />
+              <li>
+                <label for="entrada">Escolha sua entrada:</label>
+                <input list="entrada_opt" id="entrada" name="entrada" />
+                <datalist id="entrada_opt">
+                  <option value="Caldo de Mandioquinha"></option>
+                  <option value="Caprese no Palito"></option>
+                  <option value="Patê de Azeitonas"></option>
+                </datalist>
               </li>
               <li>
-                <button>Confirmar</button>
+                <label for="aniversariante">Coloque a foto do aniversariante:</label>
+                <input type="file" id="aniversariante" name="aniversariante" accept="image/png" required />
+              </li>
+              <li>
+                <label for="tipo_comida">Cozinha:</label>
+                <select id="cozinha" name="cozinha">
+                  <option value="...">...</option>
+                  <!-- <option value="brasileira">Brasileira</option> -->
+                  <optgroup label="Brasileira">
+                    <option value="feijoada">Feijoada</option>
+                    <option value="virado">Virado a Paulista</option>
+                  </optgroup>
+                  <!-- <option value="italiana">Italiana</option> -->
+                  <optgroup label="Italiana">
+                    <option value="lasanha">Lasanha</option>
+                    <option value="risotto">Risotto</option>
+                  </optgroup>
+                  <option value="francesa">Francesa</option>
+                </select>
+              </li>
+              <hr />
+              <li>
+                <label for="data_niver">Data do aniversário:</label>
+                <input type="date" name="data_niver" id="data_niver" />
+              </li>
+              <li>
+                <label for="cor_festa">Cor do tema:</label>
+                <input type="color" name="cor_festa" id="cor_festa" value="#ff00ff" />
+              </li>
+              <hr />
+              <li>
+                <label for="servicos">Serviços Adicionais:</label>
+                <br />
+                <input style="accent-color: red;" checked type="checkbox" name="servicos" id="musico" />Músico
+                <input type="checkbox" name="servicos" id="danca_do_ventre" />Dança do Ventre
+                <input type="checkbox" name="servicos" id="magico" />Mágico
+              </li>
+              <hr />
+              <li>
+                <label for="bolo">Bolo do aniversariante:</label>
+                <br />
+                <input checked type="radio" name="bolo" id="bolo_proprio" /> Bolo próprio
+                <input type="radio" name="bolo" id="bolo_nosso" /> Bolo Nosso Restaurante
+              </li>
+              <hr />
+              <li>
+                <label for="obs">Observações:</label>
+                <br />
+                <textarea name="obs" id="obs" cols="30" rows="10"></textarea>
+              </li>
+              <li>
+                <input type="image" src="../images/png/btn_bolo.png" alt="Enviar a mensagem" width="200" />
+                <!-- <input type="submit" value="Confirmar o envio" /> -->
+                <!-- <button>Confirmar</button> -->
               </li>
             </ul>
           </fieldset>
+        </form>
+      </article>
+      <article>
+        <form oninput="pessoas.value=qtd.value;res.value=`R$${parseInt(qtd.value)*50},00`">
+          <label for="">Calcule a quantidade de convidados:</label>
+          <input type="range" name="qtd" id="qtd" min="1" max="10" value="1" />
+          <input type="number" name="pessoas" id="pessoas" max="10" min="1" value="1" />
+          <output name="res" id="res">R$50,00</output>
         </form>
       </article>
       <article id="carnes">
