@@ -1,0 +1,43 @@
+h2 {
+  color: blue;
+}
+
+.h2Color {
+  color: gray;
+  text-align: right;
+  /* direction: rtl;
+  unicode-bidi: bidi-override; */
+}
+
+header img {
+  vertical-align: middle;
+}
+
+header span {
+  text-transform: capitalize;
+}
+
+nav a {
+  /* text-decoration: underline;
+  text-decoration-color: red; */
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline red dotted 4px;
+}
+
+p {
+  text-align: justify;
+  text-indent: 1.3rem;
+  text-align-last: right;
+  letter-spacing: 0.03rem;
+  word-spacing: 0.03rem;
+  line-height: 1.4rem;
+  white-space: wrap;
+}
+
+p::first-letter {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
