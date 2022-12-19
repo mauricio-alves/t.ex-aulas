@@ -1,30 +1,106 @@
-h2 {
-  color: blue;
+/* -----  CSS STYLES ------ */
+
+/* -----  LOGO ------ */
+div.logo {
+  width: 35vw;
+  min-width: 350px;
+  text-align: center;
+  margin-bottom: 12px;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 22px 0;
 }
 
-.h2Color {
-  color: gray;
-  text-align: right;
-  /* direction: rtl;
-  unicode-bidi: bidi-override; */
-}
-
-header img {
-  vertical-align: middle;
-}
-
-header span {
+div.logo span {
+  font-family: "Lobster", cursive;
+  font-size: 75%;
+  letter-spacing: 0.4rem;
+  white-space: none;
   text-transform: capitalize;
 }
 
-nav a {
-  /* text-decoration: underline;
-  text-decoration-color: red; */
-  text-decoration: none;
+div.logo > img {
+  width: 14%;
+  vertical-align: middle;
 }
 
-nav a:hover {
-  text-decoration: underline red dotted 4px;
+/* -----  HEADER ------ */
+header div.slogan {
+  background-color: black;
+  color: white;
+  padding: 0 0 7px 0;
+  margin: 0;
+}
+
+header div.slogan p {
+  padding: 0 1.5rem 0 0;
+}
+
+/* -----  NAVBAR ------ */
+div.navUp {
+  text-align: right;
+}
+
+div.navUp i {
+  color: brown;
+  cursor: pointer;
+}
+
+nav {
+  margin: 0 0 120px 0;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+nav.nav1 ul li a {
+  display: inline-block;
+  margin: 0 0.5vw 0 0;
+  text-decoration: none;
+  background-color: #dd2b2b;
+  padding: 20px 22px 12px 22px;
+  color: white;
+}
+
+nav.nav1 a:hover {
+  text-decoration: overline white dotted 4px;
+}
+
+nav.nav2 ul li a {
+  display: inline-block;
+  margin: 0 0.2vw 0 0;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  padding: 20px 22px 12px 22px;
+  color: #999;
+  border: 2px dashed #eee;
+  border-top-width: 0;
+}
+
+nav.nav2 a:hover {
+  color: black;
+  border-bottom-color: #999;
+}
+
+/* -----  TAGS ------ */
+h2 {
+  color: blue;
+  margin: 0 0 10px 0;
+}
+
+h2 + span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: brown;
+  font-weight: bold;
+  display: block;
+  text-align: right;
 }
 
 p {
@@ -40,4 +116,59 @@ p {
 p::first-letter {
   font-size: 1.8rem;
   font-weight: 900;
+}
+
+/* -----  CLASSES ------ */
+.lobster {
+  font-family: "Lobster", cursive;
+}
+
+.h2Color {
+  color: gray;
+  text-align: right;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* -----  ARTICLES ------ */
+article {
+  min-height: 100vh;
+  padding: 40px 0 0 0;
+}
+
+article#pratos p {
+  color: gray;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+article#pratos table td p {
+  color: black;
+}
+
+article#pratos p:active ~ table {
+  border: 2px dashed green;
+}
+
+article#pratos p:active {
+  color: red;
+}
+
+/* -----  FORMS ------ */
+form#formReserva {
+  margin: 0 0 40px 0;
+}
+
+input[type="radio"] {
+  accent-color: green;
+}
+
+input[type="checkbox"]:checked + span {
+  color: blue;
+}
+
+textarea {
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -o-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
 }
