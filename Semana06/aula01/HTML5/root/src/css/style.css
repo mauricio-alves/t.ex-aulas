@@ -1,4 +1,21 @@
 /* -----  CSS STYLES ------ */
+@keyframes caranguejo {
+  0% {
+    transform: rotate(8deg) scale(0.2);
+  }
+  100% {
+    transform: rotate(20deg) scale(1);
+  }
+}
+
+@keyframes peixe {
+  0% {
+    left: -30%;
+  }
+  100% {
+    left: 120%;
+  }
+}
 
 /* -----  LOGO ------ */
 div.logo {
@@ -47,6 +64,38 @@ div.navUp i {
   cursor: pointer;
 }
 
+div.navPos {
+  background-color: black;
+  width: 3vw;
+  height: 160px;
+  position: fixed;
+  /* left right bottom top; */
+  right: 0;
+  top: 40vh;
+  padding: 0 2vw 1vw 1vw;
+  border-radius: 25px 0 0 25px;
+  display: none;
+}
+
+div.navPos ul {
+  padding: 0;
+  list-style: none;
+}
+
+div.navPos ul li {
+  text-align: center;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 10px;
+}
+
+div.navPos ul li a {
+  font-size: 0.5em;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
 nav {
   margin: 0 0 120px 0;
 }
@@ -58,9 +107,18 @@ nav ul {
   text-align: left;
 }
 
+nav.nav1 {
+  position: sticky;
+  top: 0;
+}
+
+nav.nav1 ul {
+  background-color: #dd2b2b;
+}
+
 nav.nav1 ul li a {
   display: inline-block;
-  margin: 0 0.5vw 0 0;
+  margin: 0;
   text-decoration: none;
   background-color: #dd2b2b;
   padding: 20px 22px 12px 22px;
@@ -89,9 +147,34 @@ nav.nav2 a:hover {
 }
 
 /* -----  TAGS ------ */
+body {
+  width: 80%;
+  margin: auto;
+  font-size: 1.3rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 1.3rem;
+  border: 1px dotted #ccc;
+  padding: 10px;
+  background-image: url(../../images/bg_500.jpg);
+}
+
+figure {
+  padding: 20px;
+}
+
+header * {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+audio {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 h2 {
   color: blue;
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
 }
 
 h2 + span {
@@ -101,6 +184,14 @@ h2 + span {
   font-weight: bold;
   display: block;
   text-align: right;
+}
+
+ul.listaInfo {
+  list-style-image: url(../../images/png/garfo-e-faca.png);
+}
+
+ul.listaInfo li {
+  padding: 0 0 0 10px;
 }
 
 p {
@@ -118,6 +209,34 @@ p::first-letter {
   font-weight: 900;
 }
 
+table {
+  border: 1px solid #ccc;
+  width: 90%;
+  margin: 80px auto;
+  border-collapse: collapse;
+  border-bottom-width: 4px;
+}
+
+table th {
+  text-align: left;
+}
+
+table td,
+table th {
+  border: 1px solid #ccc;
+  padding: 1%;
+}
+
+table tr:nth-child(even) {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+table tr:nth-child(2) {
+  background-color: #dd2b2b;
+  color: white;
+}
+
 /* -----  CLASSES ------ */
 .lobster {
   font-family: "Lobster", cursive;
@@ -129,10 +248,81 @@ p::first-letter {
   font-family: "Courier New", Courier, monospace;
 }
 
+.container01 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.container02 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.container02 div {
+  padding: 4%;
+}
+
+.container02 div img {
+  opacity: 0.4;
+  transition: all 0.6s;
+}
+
+.container02 div img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container02 div p {
+  text-align: left;
+  word-spacing: normal;
+  line-height: normal;
+}
+
+.container02 div p:hover {
+  color: red !important;
+}
+
+.container02 div p::first-letter {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+div#imgFooter div {
+  background-size: cover;
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  border: 3px dashed white;
+  margin: 80px auto;
+  position: relative;
+}
+
+div#imgFooter div span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+}
+
+div#imgFooter div:nth-of-type(1) {
+  background-image: url(../../images/coxinha-brasileira.jpg);
+  box-shadow: 12px 12px 3px #dd2b2b;
+}
+
+div#imgFooter div:nth-of-type(2) {
+  background-image: url(../../images/frutas-e-vegetais.jpg);
+  box-shadow: -12px -12px 3px #dd2b2b;
+}
+
 /* -----  ARTICLES ------ */
-article {
+article,
+footer {
   min-height: 100vh;
-  padding: 40px 0 0 0;
+  padding: 80px 1% 0 1%;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 article#pratos p {
@@ -149,12 +339,90 @@ article#pratos p:active ~ table {
 }
 
 article#pratos p:active {
-  color: red;
+  color: #dd2b2b;
+}
+
+article#frutosDoMar {
+  background-image: url(../../images/frutos-do-mar.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+article#frutosDoMar span {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-size: 5rem;
+  color: white;
+  font-family: "Lobster", cursive;
+  line-height: 5rem;
+  text-shadow: 2px 2px 3px #dd2b2b;
+  z-index: 2;
+}
+
+article#frutosDoMar img.caranguejo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: scale(0.2);
+  animation: caranguejo 3s forwards;
+  animation-delay: 3s;
+  z-index: 1;
+}
+
+article#frutosDoMar img.peixe {
+  position: absolute;
+  left: -30%;
+  animation: peixe 10s infinite;
+  animation-delay: 2s;
 }
 
 /* -----  FORMS ------ */
 form#formReserva {
-  margin: 0 0 40px 0;
+  margin: 80px auto;
+}
+
+form#formReserva ul {
+  list-style: none;
+}
+
+datalist,
+textarea,
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not(
+    [type="date"]
+  ):not([type="image"]) {
+  width: 90%;
+  padding: 2%;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 1px 1px 2px #eee, -1px -1px 2px #eee;
+}
+
+textarea,
+input:focus {
+  outline: none;
+  background-color: rgba(250, 235, 215, 0.4);
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  padding: 0 0 0 10px;
+}
+
+fieldset {
+  border: 1px dashed #eee;
+}
+
+legend {
+  text-align: center;
+  padding: 0 10px;
+}
+
+select {
+  font-size: 0.88rem;
 }
 
 input[type="radio"] {
@@ -170,5 +438,4 @@ textarea {
   -webkit-border-radius: 12px;
   -o-border-radius: 12px;
   -ms-border-radius: 12px;
-  border-radius: 12px;
 }

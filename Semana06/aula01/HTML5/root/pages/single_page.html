@@ -16,40 +16,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
   <title>Nosso Restaurante</title>
-
-  <style>
-    body {
-      width: 80%;
-      margin: auto;
-      font-size: 1.3rem;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      line-height: 1.3rem;
-      border: 1px dotted #ccc;
-      padding: 10px;
-    }
-
-    figure {
-      padding: 20px;
-    }
-
-    header * {
-      font-size: 2rem;
-      font-weight: 700;
-    }
-
-    audio {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    select {
-      font-size: 0.88rem;
-    }
-  </style>
 </head>
 
 <body>
   <header>
+    <div class="navPos">
+      <ul>
+        <li><a href="#sobre"><i class="fa fa-star fa-2x" aria-hidden="true"></i></a></li>
+        <li><a href="#pratos"><i class="fa fa-cutlery fa-2x" aria-hidden="true"></i></a></li>
+        <li><a href="#reservas"><i class="fa fa-calendar fa-2x" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+
     <div class="logo">
       <img src="../images/svg/cenoura.svg" alt="imagem de uma cenoura" width="30" />
       <span>Nosso Restaurante</span>
@@ -59,16 +37,18 @@
       <img src="../images/salmon-1312372.jpg" alt="prato de salmão" style="width: 100%;" />
       <p class="lobster">Seu melhor lugar e o seu melhor momento.</p>
     </div>
-    <nav class="nav2" id="navBar">
-      <ul>
-        <li>
-          <a href="#sobre">Sobre nós</a>
-          <a href="#pratos">Pratos</a>
-          <a href="#reservas">Faça a sua reserva</a>
-        </li>
-      </ul>
-    </nav>
   </header>
+  <!-- NAVBAR -->
+  <nav class="nav1" id="navBar">
+    <ul>
+      <li>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#pratos">Pratos</a>
+        <a href="#reservas">Faça a sua reserva</a>
+      </li>
+    </ul>
+  </nav>
+
   <main>
     <section>
       <article id="sobre">
@@ -81,10 +61,14 @@
           reprehenderit unde itaque nemo corporis officiis fuga quasi aut voluptas alias impedit. Nobis excepturi
           nesciunt cum. Iusto mollitia quo aliquam minus hic.
         </p>
-        <img src="../images/here-take-a-look-at-our-menu.jpg" alt="imagem de clientes no restaurante" width="49%"
-          title="conheça nosso menu" />
-        <img src="../images/chef-939437_1920.jpg" alt="imagem de um chef de restaurante" width="49%"
-          title="conheça nosso menu" />
+        <div class="container01">
+          <div> <img src="../images/here-take-a-look-at-our-menu.jpg" alt="imagem de clientes no restaurante"
+              width="100%" title="conheça nosso menu" />
+          </div>
+          <div> <img src="../images/chef-939437_1920.jpg" alt="imagem de um chef de restaurante" width="100%"
+              title="conheça nosso menu" />
+          </div>
+        </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore distinctio nam rerum asperiores. Corporis
           inventore natus quae tempora incidunt iure molestiae enim laborum facere quam cum nisi dolore totam dolorum id
           at recusandae amet earum facilis repellendus iste, doloremque accusamus vero reiciendis! Ipsa temporibus
@@ -106,44 +90,40 @@
           reprehenderit unde itaque nemo corporis officiis fuga quasi aut voluptas alias impedit. Nobis excepturi
           nesciunt cum. Iusto mollitia quo aliquam minus hic.
         </p>
-        <ul>
+        <ul class="listaInfo">
           <li>Para sua festa de aniversário</li>
           <li>Para a festa da sua empresa</li>
           <li>Para o seu final de semana com os amigos</li>
         </ul>
-        <table>
-          <tr>
-            <td width="25%"><img src="../images/baked-salmon-garnished-with-asparagus-and-tomatoes-with-herbs.jpg"
-                alt="salmão" width="100%"></td>
-            <td>
-              <h3>Salmão grelhado</h3>
-              <p>R$80,00</p>
-              <p>No almoço</p>
-            </td>
-            <td width="25%"><img src="../images/authentic-italian-pasta.jpg" alt="spaghetti" width="100%"></td>
-            <td>
-              <h3>Spaghetti ao molho bolonhesa</h3>
-              <p>R$70,00</p>
-              <p>No almoço</p>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: right;">
-              <h3>Espeto de vegetais</h3>
-              <p>R$30,00</p>
-              <p>No jantar</p>
-            </td>
-            <td width="25%"><img src="../images/frutas-e-vegetais.jpg" alt="espeto de frutas e vegetais" width="100%">
-            </td>
-            <td style="text-align: right;">
-              <h3>Pizza de pepperoni</h3>
-              <p>R$54,00</p>
-              <p>No jantar com os amigos</p>
-            </td>
-            <td width="25%"><img src="../images/pizza-pepperoni-on-the-table.jpg" alt="pizza de pepperoni" width="100%">
-            </td>
-          </tr>
-        </table>
+        <div class="container02">
+          <div width="25%"><img src="../images/baked-salmon-garnished-with-asparagus-and-tomatoes-with-herbs.jpg"
+              alt="salmão" width="100%"></div>
+          <div>
+            <h3>Salmão grelhado</h3>
+            <p>R$80,00</p>
+            <p>No almoço</p>
+          </div>
+          <div width="25%"><img src="../images/authentic-italian-pasta.jpg" alt="spaghetti" width="100%"></div>
+          <div>
+            <h3>Spaghetti ao molho bolonhesa</h3>
+            <p>R$70,00</p>
+            <p>No almoço</p>
+          </div>
+          <div style="text-align: right;">
+            <h3>Espeto de vegetais</h3>
+            <p>R$30,00</p>
+            <p>No jantar</p>
+          </div>
+          <div width="25%"><img src="../images/frutas-e-vegetais.jpg" alt="espeto de frutas e vegetais" width="100%">
+          </div>
+          <div style="text-align: right;">
+            <h3>Pizza de pepperoni</h3>
+            <p>R$54,00</p>
+            <p>No jantar com os amigos</p>
+          </div>
+          <div width="25%"><img src="../images/pizza-pepperoni-on-the-table.jpg" alt="pizza de pepperoni" width="100%">
+          </div>
+        </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore distinctio nam rerum asperiores. Corporis
           inventore natus quae tempora incidunt iure molestiae enim laborum facere quam cum nisi dolore totam dolorum id
           at recusandae amet earum facilis repellendus iste, doloremque accusamus vero reiciendis! Ipsa temporibus
@@ -154,6 +134,49 @@
         <div class="navUp">
           <a href="#navBar"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a>
         </div>
+        <table>
+          <tr>
+            <td colspan="4">
+              <p>Confira suas opções!</p>
+            </td>
+          </tr>
+          <tr>
+            <th>Pratos</th>
+            <th>Sobremesas</th>
+            <th>Acompanhamentos</th>
+            <th>Bebidas</th>
+          </tr>
+          <tr>
+            <td>Picanha</td>
+            <td>Sorvete</td>
+            <td>Salada</td>
+            <td>Água com gás</td>
+          </tr>
+          <tr>
+            <td>Pasta Italiana</td>
+            <td>Bolo de Limão</td>
+            <td>Fritas</td>
+            <td>Água sem gás</td>
+          </tr>
+          <tr>
+            <td>Brasileira</td>
+            <td>Bolo de Laranja</td>
+            <td>Bacon</td>
+            <td>Chá Inglês</td>
+          </tr>
+          <tr>
+            <td>Feijoada</td>
+            <td>Pêssego em Calda</td>
+            <td>Macaxeira</td>
+            <td>Café Espresso</td>
+          </tr>
+          <tr>
+            <td>Baião de Dois</td>
+            <td>Bomba de Chocolate</td>
+            <td>Pirão</td>
+            <td>Suco de graviola</td>
+          </tr>
+        </table>
       </article>
       <article id="reservas">
         <h2 class="h2Color">Reserve nosso espaço para o seu aniversário</h2>
@@ -248,6 +271,11 @@
           <a href="#navBar"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a>
         </div>
       </article>
+      <article id="frutosDoMar">
+        <span>Frutos do Mar</span>
+        <img class="caranguejo" src="../images/caranguejo.png" alt="imagem de um caranguejo" />
+        <img class="peixe" src="../images/peixe.png" alt="imagem de um peixe" />
+      </article>
     </section>
   </main>
   <footer>
@@ -293,6 +321,10 @@
         </td>
       </tr>
     </table>
+    <div id="imgFooter" class="container01">
+      <div><span>Coxinha Brasileira</span></div>
+      <div><span>Vegetais e Frutas</span></div>
+    </div>
   </footer>
 </body>
 
