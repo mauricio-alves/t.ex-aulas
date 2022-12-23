@@ -1,0 +1,28 @@
+/* ---------- Funções CSS ---------- */
+:root {
+  --m1: 0 auto;
+  --corPadrao: aqua;
+}
+
+div#banner1 {
+  background-color: bisque;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  width: calc(100% - 100px);
+  left: 50px;
+  top: 40%;
+}
+
+h1 {
+  font-size: calc(1.5rem + 3vw);
+}
+
+div#banner2 {
+  background-color: var(--corPadrao);
+  text-align: center;
+  padding: 10px 0;
+  /* width: max(50%, 300px); */
+  width: min(50%, 300px);
+  margin: var(--m1);
+}

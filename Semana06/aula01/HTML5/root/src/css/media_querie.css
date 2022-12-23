@@ -1,0 +1,157 @@
+/* -------- Media querie -------- */
+
+* {
+  font-size: calc(0.5rem + 1vw);
+}
+
+article {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+nav {
+  background-color: #f8f8f8;
+  padding: 5px 0;
+  margin: 20px 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 1%;
+}
+
+footer div {
+  margin: 20px 0;
+}
+
+aside {
+  position: absolute;
+  right: -20vw;
+  border-radius: 50%;
+  width: 50%;
+  height: 80vh;
+  background-color: rgba(226, 236, 215, 0.4);
+  bottom: 10%;
+}
+
+.hb {
+  display: none;
+}
+
+.divulga {
+  position: absolute;
+  top: 25%;
+  left: 14%;
+  width: 20vw;
+}
+
+.divulga div {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 40%;
+}
+
+.logo img {
+  width: 30%;
+  vertical-align: middle;
+  filter: invert(100);
+}
+
+.logo span {
+  background-color: #8f7358;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0 22px 22px 0;
+}
+
+.box01 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.box01 img {
+  width: 100%;
+}
+
+.box01 div {
+  width: 30%;
+}
+
+.btn {
+  border: none;
+  padding: 15px 2vw;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: #fff;
+  border: 2px solid #555;
+  color: #555;
+  cursor: pointer;
+}
+
+.btn-info {
+  background-color: #6d563e;
+  color: #fff;
+  margin: 20px 1.8vw;
+}
+
+.btn-success {
+  background-color: #d7d8d7;
+  margin: 40px 0;
+  color: #555;
+}
+
+@media (max-width: 415px) and (orientation: portrait) {
+  aside {
+    display: none;
+  }
+
+  .logo span {
+    display: block;
+  }
+
+  .logo img {
+    width: 50%;
+  }
+
+  .hb {
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+    display: block;
+  }
+
+  .box01 {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .box01 div {
+    width: 100%;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+@media (max-width: 916px) and (orientation: landscape) {
+  .divulga div p {
+    color: #8f7358;
+  }
+}

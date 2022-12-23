@@ -1,0 +1,27 @@
+/* -------- After | Before -------- */
+
+ul {
+  list-style: none;
+}
+
+li.lista01::before {
+  content: ">";
+}
+
+li.lista01::after {
+  content: "_";
+}
+
+li.lista02::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(232, 153, 57);
+  border-radius: 50%;
+}
+
+li.lista02 span {
+  padding: 0 0 0 0.5%;
+  color: brown;
+}

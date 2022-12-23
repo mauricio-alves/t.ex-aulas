@@ -1,0 +1,45 @@
+/* -------- After | Before | Counters -------- */
+
+body {
+  counter-reset: count-01 10;
+}
+
+div#box01 div {
+  counter-reset: count-h2;
+}
+
+h2::before {
+  counter-increment: count-h2;
+  content: counters(count-h2, ".") ":";
+}
+
+ul {
+  list-style: none;
+}
+
+li.lista01::before {
+  content: ">";
+}
+
+li.lista01::after {
+  content: "_";
+}
+
+li.lista02::before {
+  counter-increment: count-01;
+  content: counter(count-01);
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  text-align: center;
+  color: rgb(253, 251, 251);
+  background-color: rgb(232, 153, 57);
+  border-radius: 50%;
+}
+
+li.lista02 span {
+  padding: 0 0 0 0.5%;
+  color: brown;
+}
