@@ -1,0 +1,79 @@
+/* DRAW CSS */
+
+.cruz {
+  background-color: orange;
+  height: 100px;
+  width: 20px;
+  position: relative;
+  margin: 0 0 0 40px;
+}
+
+.cruz::after {
+  content: "";
+  position: absolute;
+  background-color: orange;
+  height: 20px;
+  width: 100px;
+  left: -40px;
+  top: 40px;
+  display: block;
+}
+
+.lua {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: 15px 15px 0 #999;
+  margin: 50px 0;
+  border-radius: 50%;
+}
+
+.calendario {
+  margin: 100px 50px;
+}
+
+.calendario time {
+  font-size: 1rem;
+  display: block;
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  border: 1px solid black;
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff,
+    0 5px 0 #bdbdbd, 0 0 1px #bdbdbd;
+  overflow: hidden;
+}
+
+.calendario time em {
+  position: absolute;
+  top: 35px;
+  color: #fdfdfd;
+  background-color: orangered;
+  display: block;
+  width: 100%;
+  text-align: center;
+  /* border-radius: 0.6rem; */
+}
+
+.calendario time strong {
+  position: absolute;
+  top: 0;
+  padding: 0.4rem 0;
+  color: white;
+  background-color: #fd9f1b;
+  border-bottom: 3px dashed #f37302;
+  width: 100%;
+  text-align: center;
+}
+
+.calendario time span {
+  position: absolute;
+  width: 100%;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  top: 55%;
+  font-size: 2rem;
+}
