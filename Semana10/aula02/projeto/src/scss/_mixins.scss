@@ -1,0 +1,45 @@
+@import "functions";
+
+@mixin box {
+  min-width: 1170px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  width: 90%;
+  position: relative;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+$imgs: (
+  "Carne Grelhada": "beef-g66eb2a540_1920.jpg",
+  "Bacon com Ovos": "breakfast-ga9b591474_1920.jpg",
+  "Salada Mix": "salad-gf22844a91_1920.jpg",
+  "Salmão Grelhado":
+    "baked-salmon-garnished-with-asparagus-and-tomatoes-with-herbs.jpg",
+  "Coxinha de Frango": "coxinha_215.jpg",
+  "Pizza de Pepperoni": "pizza-pepperoni-on-the-table.jpg",
+  "Pasta Italiana": "authentic-italian-pasta.jpg",
+  "Salmão com Legumes": "salmon-1312372.jpg",
+  "Gelatto": "drink_01.jpg",
+);
+
+$n: 0;
+
+@each $titulo, $url in $imgs {
+  $n: $n + 1;
+  #card#{$n} {
+    background-image: url("../images/produtos/#{$url}");
+    background-size: cover;
+
+    & h2::before {
+      content: "#{$titulo}";
+      display: block;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      padding: 1rem 0.5rem;
+    }
+  }
+}

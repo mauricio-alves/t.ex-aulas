@@ -1,0 +1,219 @@
+@charset "UTF-8";
+* {
+  font-family: "Ropa Sans";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#card1 {
+  background-image: url("../images/produtos/beef-g66eb2a540_1920.jpg");
+  background-size: cover;
+}
+#card1 h2::before {
+  content: "Carne Grelhada";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+#card2 {
+  background-image: url("../images/produtos/breakfast-ga9b591474_1920.jpg");
+  background-size: cover;
+}
+#card2 h2::before {
+  content: "Bacon com Ovos";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+#card3 {
+  background-image: url("../images/produtos/salad-gf22844a91_1920.jpg");
+  background-size: cover;
+}
+#card3 h2::before {
+  content: "Salada Mix";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+#card4 {
+  background-image: url("../images/produtos/baked-salmon-garnished-with-asparagus-and-tomatoes-with-herbs.jpg");
+  background-size: cover;
+}
+#card4 h2::before {
+  content: "Salmão Grelhado";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+#card5 {
+  background-image: url("../images/produtos/coxinha_215.jpg");
+  background-size: cover;
+}
+#card5 h2::before {
+  content: "Coxinha de Frango";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+#card6 {
+  background-image: url("../images/produtos/pizza-pepperoni-on-the-table.jpg");
+  background-size: cover;
+}
+#card6 h2::before {
+  content: "Pizza de Pepperoni";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+#card7 {
+  background-image: url("../images/produtos/authentic-italian-pasta.jpg");
+  background-size: cover;
+}
+#card7 h2::before {
+  content: "Pasta Italiana";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+#card8 {
+  background-image: url("../images/produtos/salmon-1312372.jpg");
+  background-size: cover;
+}
+#card8 h2::before {
+  content: "Salmão com Legumes";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+#card9 {
+  background-image: url("../images/produtos/drink_01.jpg");
+  background-size: cover;
+}
+#card9 h2::before {
+  content: "Gelatto";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+.navbar__nav, .socialMedia__icones {
+  list-style: none;
+}
+
+.header {
+  min-width: 1170px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  width: 90%;
+  position: relative;
+  background-image: url("../images/backgrounds/Background_home_1.jpg");
+  background-size: 100%;
+  background-position-y: -300px;
+}
+
+.header-heightMiddle {
+  height: 300px;
+  border: 1px solid black;
+}
+
+.logo__slogan {
+  font-size: 3rem;
+  text-shadow: 2px 2px 1px rgba(1, 1, 8, 0.6);
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.mx-1 {
+  margin: 0 1.2rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.navbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.navbar__link {
+  color: #f1f806;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.navbar__link:hover {
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.servicos {
+  min-width: 1170px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.servicos__card {
+  width: 31%;
+  margin: 0 1.2rem;
+  margin-bottom: 1rem;
+  height: 400px;
+  box-shadow: 8px 8px 10px #999;
+}
+
+@media (max-width: 1170px) {
+  .header,
+  .navbar__nav {
+    flex-flow: column;
+    min-width: 100%;
+  }
+  .navbar {
+    z-index: 1;
+  }
+  .socialMedia {
+    z-index: 2;
+  }
+  .socialMedia__icones {
+    flex-flow: column;
+  }
+  .socialMedia__item {
+    margin: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

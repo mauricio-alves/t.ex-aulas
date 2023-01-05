@@ -1,0 +1,106 @@
+@use "variaveis" as let;
+@use "mixins" as mix;
+@use "extends";
+
+.header {
+  @include mix.box;
+  // background-image: let.$bgHome;
+  background-image: url(mix.bgImage(let.$bgHome_1));
+  background-size: 100%;
+  background-position-y: -300px;
+}
+
+.header-heightMiddle {
+  height: 300px;
+  border: 1px solid black;
+}
+
+.logo__slogan {
+  font-size: 3rem;
+  text-shadow: 2px 2px 1px rgba(1, 1, 8, 0.6);
+}
+
+.m-1 {
+  margin: let.$m1;
+}
+
+.mx-1 {
+  margin: let.$mx1;
+}
+
+.p-1 {
+  padding: let.$p1;
+}
+
+.text-white {
+  color: let.$linkHover;
+}
+
+.navbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: let.$bgColorNav;
+
+  &__nav {
+    @extend %list-none;
+  }
+
+  &__link {
+    color: let.$link;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-decoration: none;
+
+    &:hover {
+      color: let.$linkHover;
+    }
+  }
+}
+
+.socialMedia__icones {
+  @extend %list-none;
+}
+
+.container {
+  @include mix.flex-center;
+}
+
+.servicos {
+  @include mix.box;
+  @include mix.flex-center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.servicos__card {
+  width: 31%;
+  margin: let.$mx1;
+  margin-bottom: let.$m1;
+  height: 400px;
+  box-shadow: 8px 8px 10px #999;
+}
+
+@media (max-width: 1170px) {
+  .header,
+  .navbar__nav {
+    flex-flow: column;
+    min-width: 100%;
+  }
+
+  .navbar {
+    z-index: 1;
+  }
+
+  .socialMedia {
+    z-index: 2;
+
+    &__icones {
+      flex-flow: column;
+    }
+
+    &__item {
+      margin: let.$m1;
+    }
+  }
+}
