@@ -1,0 +1,28 @@
+// @import '_b.scss';
+@use "_b.scss" as v;
+@use "recursos" with (
+  $black: #999,
+  $bordaPadrao: 1rem
+);
+
+$cor1: red;
+$cor2: orange;
+$cor3: brown;
+$bg1: #eee;
+
+/* ---- Body Styles ---- */
+body {
+  $bg1: $cor3 !global;
+  background-color: $bg1;
+}
+
+p {
+  color: $bg1;
+  margin: v.$m1;
+}
+
+ul {
+  li {
+    color: $cor1;
+  }
+}

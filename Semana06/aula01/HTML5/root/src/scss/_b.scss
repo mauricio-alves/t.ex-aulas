@@ -1,0 +1,9 @@
+$m1: auto;
+$m2: 50%;
+$margin: $m2;
+$padding: 0;
+
+section {
+  margin: $margin;
+  padding: $padding;
+}

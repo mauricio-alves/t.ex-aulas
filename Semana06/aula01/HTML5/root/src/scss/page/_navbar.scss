@@ -1,0 +1,11 @@
+$align: center;
+$fontItem: bold 1rem "Arial Black";
+
+/* ---- NAVBAR ---- */
+nav.navbar {
+  text-align: $align;
+}
+
+.navbar-item {
+  font: $fontItem;
+}

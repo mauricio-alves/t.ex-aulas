@@ -1,0 +1,11 @@
+$padHead: 1%;
+$bgLogo: url(/images/bg_500.jpg);
+
+/* ---- HEADER ---- */
+header {
+  padding: $padHead;
+}
+
+.logo {
+  background-image: $bgLogo;
+}

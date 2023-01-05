@@ -1,0 +1,157 @@
+@use "sass:map";
+
+$temaAlerta: (
+  "sucesso": green,
+  "info": purple,
+  "alerta": red,
+);
+
+$black: black !default;
+$bordaPadrao: 12px !default;
+$sombraPadrao: 1rem 0.75rem 1rem rgba($black, 0.3) !default;
+$temaEscuro: true !default;
+$corPrimaria: #d3cfcf;
+$corBordaPrimaria: #6a6969;
+
+@if ($temaEscuro) {
+  $corPrimaria: darken($corPrimaria, 60%);
+  $corBordaPrimaria: lighten($corBordaPrimaria, 30%);
+}
+
+// Mixing
+@mixin cor-01 {
+  color: orange;
+}
+
+@mixin lista-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@mixin lista-horizontal {
+  // Include
+  @include lista-reset;
+
+  li {
+    display: inline-block;
+    margin: {
+      left: 0;
+      right: 1rem;
+    }
+  }
+}
+
+h4 {
+  @include cor-01;
+}
+
+nav ul {
+  @include lista-horizontal;
+}
+
+@mixin icone-position($img, $top-bottom, $left-right) {
+  .icone-#{$img} {
+    background-image: url(/images/png/#{img}.png);
+    position: absolute;
+    #{$top-bottom}: 0;
+    #{$left-right}: 0;
+  }
+}
+
+@include icone-position("facebook", top, right);
+
+@mixin anima($duration, $count) {
+  $name: anima-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: $count;
+}
+
+.boxAnima {
+  @include anima(2s, infinity) {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+}
+
+// Nesting
+.boxAnima,
+.alert {
+  border: solid #eee 1px;
+  p,
+  a {
+    background: {
+      color: khaki;
+    }
+  }
+}
+
+h2 + {
+  span {
+    font: {
+      weight: bold;
+      size: 2rem;
+    }
+  }
+}
+
+div ~ {
+  ul {
+    list-style: none;
+  }
+}
+
+.destaque {
+  background-color: #54a021;
+  text-align: center;
+
+  &--urgente {
+    border: 4px solid orange;
+  }
+}
+
+.alert {
+  color: $corPrimaria;
+  border-color: $corBordaPrimaria;
+
+  & p {
+    font: {
+      weight: bold;
+    }
+  }
+}
+
+// Function
+$largura: 50px, 30px, 120px;
+
+@function soma($numeros...) {
+  $n: 0;
+  @each $num in $numeros {
+    $n: $n + $num;
+  }
+  @return $n;
+}
+
+.box-w {
+  width: soma(50px, 30px, 120px);
+  min-width: max($largura...);
+}
+
+.btn {
+  background-color: map.get($temaAlerta, "info");
+}
+
+.box {
+  color: $black;
+  border-radius: $bordaPadrao;
+  box-shadow: $sombraPadrao;
+}

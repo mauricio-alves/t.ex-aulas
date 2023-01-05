@@ -1,0 +1,68 @@
+// .alerta, .erro, .erroGrave {
+//   color: #991010;
+//   font-size: 1.5rem;
+// }
+
+// .alerta, .erro {
+//   background-color: #f28383;
+// }
+
+// .erroGrave {
+//   border-top: 2px solid #991010;
+//   border-bottom: 2px solid #991010;
+// }
+
+$erro: #991010;
+$link-nav: #2bc8eb;
+$f-md: 1.5rem;
+
+.alerta {
+  color: $erro;
+  font-size: $f-md;
+}
+
+.erro {
+  @extend .alerta;
+  background-color: lighten($erro, 40%);
+}
+
+.erroGrave {
+  @extend .erro;
+  border-top: $erro 2px solid;
+  border-bottom: $erro 2px solid;
+}
+
+// NAV
+a {
+  color: $link-nav;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link {
+  @extend a;
+  font-size: small;
+}
+
+%bt-opt-1 {
+  box-sizing: border-box;
+  border: 1px rgba($color: #000, $alpha: 0.12) solid;
+}
+
+%bt-opt-2 {
+  box-sizing: border-box;
+  background-color: lighten($color: $link-nav, $amount: 40%);
+}
+
+.btn-active {
+  color: $link-nav;
+  @extend %bt-opt-2;
+}
+
+.btn-reset {
+  color: #eee;
+  @extend %bt-opt-2;
+}
