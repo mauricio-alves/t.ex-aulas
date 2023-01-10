@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_06</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/recursos.css">
+    <script src="/js/exJS_06.js" async></script>
+</head>
+<style>
+    .hide {
+        display: none;
+    }
+</style>
+
+<body>
+    <main class="container mt-4">
+        <h2 class="titulo" id="titulo01">EX_06 Javascript</h2>
+       
+        <div id="box01" class="boxPadrao bordaPadrao sombraPadrao w-100">
+            <span id="msgCarrinho" class="mb-2 d-block"></span>
+            <p class="labelPadrao textCenter textBold" style="background-color:#f1f1f1">Carrinho de Compras</p>
+            <form id="form-carrinho">
+                <div class="row">
+                    <div class="col">
+                        <label for=""></label>
+                    </div>
+                    <div class="col">
+                        <label for="">Produto</label>
+                    </div>
+                    <div class="col">
+                        <label for="">Preço</label>
+                    </div>
+                    <div class="col">
+                        <label for="">Quantidade</label>
+                    </div>
+                    <div class="col">
+                        <label for="">Total</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="row mt-4 item-carrinho">
+                        <div class="col item-imagem">
+                        
+                        </div>
+                        <div class="col item-nome">
+                            <span></span>
+                        </div>
+                        <div class="col item-preco">
+                            <span></span>
+                        </div>
+                        <div class="col item-quantidade">
+                            <input type="number" name="item-qtd" class="input-item-qtd w-50 border-0 bg-light" min="0" max="10">
+                        </div>
+                        <div class="col item-total">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" style="text-align: right;">
+            <button type="button" class="btn btnPadrao p-2 m-5" id="btnCheckout">Finalizar Compra</button>
+                    </div>
+                </div>
+            </form>
+            <p class="textCenter p-1 mtb-1 bgPadrao hide" id="mensagem"></p>
+        </div>
+    </main> 
+</body>
+
+</html>

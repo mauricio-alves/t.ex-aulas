@@ -1,0 +1,12 @@
+<h3>Olá eu sou um texto!</h3>
+
+<div>
+        <img src="/images/produtos/breakfast-ga9b591474_1920.jpg" alt="BreakFast" class="w-50 px-4" align="left">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, eum quia ea, odio ipsum doloremque similique quam dolores quisquam debitis consequuntur, error fugit libero repudiandae consectetur beatae cumque vel. Harum atque reprehenderit nobis explicabo, illo beatae amet quam ad alias. 
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+        <div class="mt-5 pt-5">
+        <p>Qui, eum quia ea, odio ipsum doloremque similique quam dolores quisquam debitis consequuntur, error fugit libero repudiandae consectetur beatae cumque vel. Harum atque reprehenderit nobis explicabo, illo beatae amet quam ad alias
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, eum quia ea, odio ipsum doloremque similique quam dolores quisquam debitis consequuntur, error fugit libero repudiandae consectetur beatae cumque vel. Harum atque reprehenderit nobis explicabo, illo beatae amet quam ad alias
+        </p>
+        </div>
+    </div>
