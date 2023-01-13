@@ -33,6 +33,7 @@ document.querySelector("#btnConfTurno").addEventListener("click", function () {
 
 st1Txt.value = "Atendimento";
 st2Txt.value = "Entrega";
+
 document.querySelector("#btnConfSetor").addEventListener("click", function () {
   temp = st1Txt.value;
   st1Txt.value = st2Txt.value;
