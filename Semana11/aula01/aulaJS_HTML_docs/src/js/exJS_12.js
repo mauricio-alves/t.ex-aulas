@@ -1,34 +1,49 @@
 // console.log("testando");
 
-import { msg02, msgAula, trocaTurno, trocaSetor } from "./module/module.js";
+import {
+  msg02,
+  msgAula,
+  trocaTurno,
+  trocaSetor,
+  revezaTurno,
+  extra1,
+  extra2,
+} from "./module/module.js";
 
 // console.log(msg02);
 // console.log(msgAula("JavaScript"));
 
 let t1,
   t2,
-  st1,
-  st2,
   t1Txt,
   t2Txt,
   st1Txt,
   st2Txt,
-  btnConfTurno,
-  btnConfSetor,
-  btnConfTipoTurno,
   tipo1Txt,
   tipo2Txt,
-  temp,
   turno0,
   turno1,
   setor0,
   setor1,
   revezamento0,
-  revezamento1;
+  revezamento1,
+  anterior,
+  ativo,
+  listOn;
 
 t1 = 8;
 t2 = 4;
 
+anterior = document.querySelector(".dupla-0");
+ativo = 0;
+
+let duplas = {
+  dupla0: ["Estela Martins", "Adonis Santos"],
+  dupla1: ["Cleonildo Amarante", "Pilar Detomasi"],
+  dupla2: ["Francis Albieri", "Portella Afonso Silva"],
+};
+
+// FORMULÁRIOS
 t1Txt = document.querySelector("#func01-turno");
 t2Txt = document.querySelector("#func02-turno");
 st1Txt = document.querySelector("#func01-setor");
@@ -36,50 +51,72 @@ st2Txt = document.querySelector("#func02-setor");
 tipo1Txt = document.querySelector("#func01-extra");
 tipo2Txt = document.querySelector("#func02-extra");
 
-turno0 = document.querySelector("#info1-00 span:nth-of-type(1)");
-turno1 = document.querySelector("#info1-01 span:nth-of-type(1)");
+function infos(ativo) {
+  turno0 = document.querySelector(
+    `.dupla-${ativo} #info1-00 span:nth-of-type(1)`
+  );
+  turno1 = document.querySelector(
+    `.dupla-${ativo} #info1-01 span:nth-of-type(1)`
+  );
 
-setor0 = document.querySelector("#info1-00 span:nth-of-type(2)");
-setor1 = document.querySelector("#info1-01 span:nth-of-type(2)");
+  setor0 = document.querySelector(
+    `.dupla-${ativo} #info1-00 span:nth-of-type(2)`
+  );
+  setor1 = document.querySelector(
+    `.dupla-${ativo} #info1-01 span:nth-of-type(2)`
+  );
 
-revezamento0 = document.querySelector("#info1-00 span:nth-of-type(3)");
-revezamento1 = document.querySelector("#info1-01 span:nth-of-type(3)");
+  revezamento0 = document.querySelector(
+    `.dupla-${ativo} #info1-00 span:nth-of-type(3)`
+  );
+  revezamento1 = document.querySelector(
+    `.dupla-${ativo} #info1-01 span:nth-of-type(3)`
+  );
+}
+infos(ativo);
 
-trocaTurno(t1Txt, t2Txt, turno0, turno1);
+trocaTurno(t1Txt, t2Txt, turno0, turno1, false);
 
 document.querySelector("#btnConfTurno").addEventListener("click", function () {
-  trocaTurno(t1Txt, t2Txt, turno0, turno1);
+  infos(ativo);
+  trocaTurno(t1Txt, t2Txt, turno0, turno1, true);
 });
 
 trocaSetor(st1Txt, st2Txt, setor0, setor1);
 
 document.querySelector("#btnConfSetor").addEventListener("click", function () {
+  infos(ativo);
   trocaSetor(st1Txt, st2Txt, setor0, setor1);
 });
+
+tipo1Txt.value = extra1;
+tipo2Txt.value = extra2;
 
 document
   .querySelector("#btnConfTipoTurno")
   .addEventListener("click", function () {
-    temp = tipo1Txt.value;
-    tipo1Txt.value = tipo2Txt.value;
-    revezamento0.innerText = tipo1Txt.value;
-    tipo2Txt.value = temp;
-    revezamento1.innerText = tipo2Txt.value;
+    infos(ativo);
+    revezaTurno(tipo1Txt, tipo2Txt, revezamento0, revezamento1);
   });
 
-let anterior = 0;
+listOn = ["border", "border-4", "border-warning"];
+
+document.querySelector(".dupla-0").classList.remove("bg-light");
+document.querySelector(".dupla-0").classList.add(...listOn);
 
 document.querySelectorAll("input[type=radio]").forEach((el, i) => {
-  el.onclick = function () {
-    i === 0 ? (anterior = 1) : null;
-    if (el.checked) {
-      document
-        .querySelector(`.dupla:nth-of-type(${i + 1})`)
-        .classList.remove("bg-light");
-    }
-    document
-      .querySelector(`.dupla:nth-of-type(${anterior + 1})`)
-      .classList.add("bg-light");
-    anterior = i;
+  el.onchange = function () {
+    document.querySelector(`.dupla-${i}`).classList.remove("bg-light");
+    document.querySelector(`.dupla-${i}`).classList.add(...listOn);
+    anterior.classList.add("bg-light");
+    anterior.classList.remove(...listOn);
+
+    anterior = document.querySelector(`.dupla-${i}`);
+    ativo = i;
+
+    document.querySelector("label[for=func-01").innerText =
+      duplas[`dupla${i}`][0];
+    document.querySelector("label[for=func-02").innerText =
+      duplas[`dupla${i}`][1];
   };
 });
