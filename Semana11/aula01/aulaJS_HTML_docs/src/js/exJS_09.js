@@ -1,4 +1,4 @@
-console.log("08");
+console.log("09");
 
 let carrinho = {
   item1: {

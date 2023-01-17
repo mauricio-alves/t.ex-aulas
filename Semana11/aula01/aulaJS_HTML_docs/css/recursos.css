@@ -1,52 +1,60 @@
 /*Recursos CSS ///// */
 
-.boxPadrao{
-    padding:3%;
-    width:50%;
-    margin:10vh auto;
-    border-radius:12px;
+.boxPadrao {
+  padding: 3%;
+  width: 50%;
+  margin: 10vh auto;
+  border-radius: 12px;
 }
 
-.bordaPadrao{
-    border:1px solid #eee;
+.bordaPadrao {
+  border: 1px solid #eee;
 }
 
-.sombraPadrao{
-    box-shadow:10px 10px 2px #eee;
+.sombraPadrao {
+  box-shadow: 10px 10px 2px #eee;
 }
 
-.labelPadrao{
-    font-size:1.5rem;
+.labelPadrao {
+  font-size: 1.5rem;
 }
-.textCenter{
-    text-align: center;
+.textCenter {
+  text-align: center;
 }
-.textBold{
-    font-weight: bold;
+.textBold {
+  font-weight: bold;
 }
-.mtb-1{
-    margin:0.7rem 0
+.mtb-1 {
+  margin: 0.7rem 0;
 }
-.p-1{
-    padding:0.4rem;
+.p-1 {
+  padding: 0.4rem;
 }
-.inputPadrao{
-    width:100%;
-    border:none;
-    outline:none;
+.inputPadrao {
+  width: 100%;
+  border: none;
+  outline: none;
 }
-.btn{
-    padding:2%;
-    background-color: rgba(119,112,190,0.7);
-    border:none;
-    border-radius:12px;
-    display:inline-block;
-    cursor:pointer;
+.btn {
+  padding: 2%;
+  background-color: rgba(119, 112, 190, 0.7);
+  border: none;
+  border-radius: 12px;
+  display: inline-block;
+  cursor: pointer;
 }
-.btnPadrao{
-    box-shadow: inset -3px -3px 3px rgba(72,56,232,0.3);
-    color:#fff;
+.btnPadrao {
+  box-shadow: inset -3px -3px 3px rgba(72, 56, 232, 0.3);
+  color: #fff;
 }
-.bgPadrao{
-    background-color:rgba(243,236,227,0.2)
+.bgPadrao {
+  background-color: rgba(243, 236, 227, 0.2);
+}
+
+.right {
+  text-align: right;
+}
+
+.item-fechar {
+  cursor: pointer;
 }
