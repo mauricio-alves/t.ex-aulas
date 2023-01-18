@@ -48,7 +48,7 @@ let carrinho = {
     inputNumber.setAttribute("class", "w-50 border-0 bg-light");
     inputNumber.min = "0";
     inputNumber.max = "10";
-    inputNumber.value = "0";
+    inputNumber.value = carrinho[key].quantidade;
     obj.appendChild(inputNumber);
 
     inputNumber.onchange = function () {
@@ -57,6 +57,8 @@ let carrinho = {
       document.querySelector(
         `.item-carrinho-${i} .item-total span`
       ).innerText = `R$ ${total.toFixed(2)}`;
+      carrinho[key].quantidade = this.value;
+      carrinho[key].total = total;
       carrinho["totalCarrinho"]();
     };
   },
@@ -82,6 +84,10 @@ let carrinho = {
     });
   },
   deleteItem: function (item) {
+    resultado -= carrinho[item].total;
+    document.querySelector(
+      "#totalCarrinho"
+    ).innerText = `R$ ${resultado.toFixed(2)}`;
     delete carrinho[item];
     montaCarrinho();
   },
@@ -120,3 +126,22 @@ function montaCarrinho() {
 }
 
 montaCarrinho();
+
+// adicionando cupom
+function cupomDesconto() {
+  let cupom = Math.random().toString(36).substring(2, 9);
+  return cupom;
+}
+
+document.querySelector("#cupom p").innerText = cupomDesconto();
+
+document.querySelector("#btnCupom").addEventListener("click", () => {
+  let desconto = resultado * 0.9;
+  let cupom = cupomDesconto();
+  document.querySelector("#inputDesconto").value.toLowerCase() ==
+  document.querySelector("#cupom p").innerText
+    ? (document.querySelector(
+        "#totalCarrinho"
+      ).innerText = `R$ ${desconto.toFixed(2)}`)
+    : alert("Cupom inválido!");
+});
