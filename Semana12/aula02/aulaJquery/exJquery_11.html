@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Card</title>
+      <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        />
+</head>
+<style>
+    .desfoque{
+        filter:blur(5px)
+    }
+    #c2{
+        background-color:antiquewhite;
+        opacity:0.2
+    }
+</style>
+<body>
+    <div class="container mt-5 p-5 row">
+         <img src="/images/user.jpg" class="card-img-top w-50" alt="Card User">
+    <div class="mt-5 col">
+        <h2>João Developer</h2>
+        <p>Descrição</p>
+        <div class="card" id="c1" style="width:400px;">
+            <img src="/images/user.jpg" class="card-img-top w-50" alt="Card User">
+            <div class="card-header">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, praesentium!
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Lorem Ipsum</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, architecto.</p>
+                <a href="#" class="btn btn-info">Veja meu perfil no Linkedin</a>
+            </div>
+            <div class="card-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eveniet veritatis, deserunt dolore praesentium quidem nam laudantium, tempora perspiciatis, aperiam odit cupiditate nobis sapiente voluptas. Ex corrupti minima non expedita?</div>
+        </div>
+    </div>
+
+     <div class="mt-5 col">
+        <h2>Beatrix UX</h2>
+        <p>Descrição</p>
+        <div class="card" id="c2" style="width:400px;">
+           
+            <div class="card-header">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, praesentium!
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Lorem Ipsum</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, architecto.</p>
+                <button href="#" class="btn" id="btnPerfil" disabled>Veja meu perfil no Linkedin</button>
+            </div>
+            </div>
+             <img src="/images/user.jpg" class="card-img-bottom w-50 desfoque" id="avatar_1" alt="Card User">
+            <a href="#" id="btnSaibaMais">Saiba mais</a>
+            </div>
+             <div class="card-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eveniet veritatis, deserunt dolore praesentium quidem nam laudantium, tempora perspiciatis, aperiam odit cupiditate nobis sapiente voluptas. Ex corrupti minima non expedita?</div>
+             <div class="mt-5">
+             <a href="#" id="btnVoltar">Voltar</a>
+             </div>
+        </div>
+         
+    </div>
+    </div>
+</body>
+
+</html>

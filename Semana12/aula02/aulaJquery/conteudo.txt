@@ -1,0 +1,8 @@
+ <section>
+            <h2>Aprecie nosso espeto de vegetais</h2>
+            <article>
+                <img src="../images/vegetable-skewer-3317060_1280.jpg" alt="itens selecionados" class="rounded w-75 mb-3">
+               
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore saepe iusto architecto, ducimus repellendus sapiente a quaerat dolorum accusamus laborum! Ipsum sequi amet ab accusamus quas maiores debitis possimus non a! Sapiente, reiciendis nesciunt, corrupti sequi ex quia molestiae minus, error molestias eius quas illo? Officia optio vitae laboriosam ad aliquid vero culpa illum! Vel laudantium ea illum cumque. Corrupti eum error perferendis assumenda incidunt minus earum perspiciatis voluptate cumque? Necessitatibus quos dicta repudiandae beatae natus illo amet fuga enim, similique quod. Veniam numquam in itaque, reiciendis totam maxime, tenetur iusto possimus alias ullam asperiores ad. Laboriosam possimus, laudantium placeat velit illum aut eaque voluptates accusamus error deleniti sed quae architecto odio alias natus at assumenda nobis blanditiis obcaecati totam.</p>
+            </article>
+        </section>

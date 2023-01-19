@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<style>
+    button {
+        text-align: center;
+        height: 35px;
+    }
+</style>
+
+<body>
+    <div class="container mt-5 p-5 row">
+        <div class="mt-5 mx-4 col-sm-5 border p-4" id="card1">
+            <div class="row">
+                <h2 class="col-sm-11">Título do Card</h2>
+                <button class="col-sm-1 btn btn-primary text-white">X</button>
+            </div>
+            <p>Descrição</p>
+            <div class="card" style="width:400px;">
+                <img src="/images/user.jpg" class="card-img-top w-50" alt="Card User">
+                <div class="card-header">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, praesentium!
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Lorem Ipsum</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, architecto.</p>
+                    <a href="#" class="btn btn-info">Veja meu perfil no Linkedin</a>
+                </div>
+                <div class="card-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eveniet
+                    veritatis, deserunt dolore praesentium quidem nam laudantium, tempora perspiciatis, aperiam odit
+                    cupiditate nobis sapiente voluptas. Ex corrupti minima non expedita?</div>
+            </div>
+        </div>
+
+        <div class="mt-5 col" id="card2">
+            <h2>Título do Card</h2>
+            <p>Descrição</p>
+            <div class="card" style="width:400px;">
+
+                <div class="card-header">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, praesentium!
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Lorem Ipsum</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, architecto.</p>
+                    <a href="#" class="btn btn-info">Veja meu perfil no Linkedin</a>
+                </div>
+                <img src="/images/user.jpg" class="card-img-bottom w-50" alt="Card User">
+                <div class="card-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eveniet
+                    veritatis, deserunt dolore praesentium quidem nam laudantium, tempora perspiciatis, aperiam odit
+                    cupiditate nobis sapiente voluptas. Ex corrupti minima non expedita?</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $().ready(function () {
+        $('#card2').hide()
+        $('button').click(function () {
+            // $('#card1').hide()
+            $('#card1').fadeOut(2000, function () {
+                $('#card2').fadeIn()
+            })
+        })
+    })
+</script>
+
+</html>
