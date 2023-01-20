@@ -1,82 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Modelo Card</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
-    <style>
-        .desfoque {
-            filter: blur(5px);
-        }
-        img {
-            opacity: 0.6;
-            width: 100%;
-        }
-    </style>
-    <body>
-        <div class="container mt-5 p-5 row">
-            <div class="mt-0 col">
-                <div class="py-3">
-                    <a class="btn btn-primary"
-                        data-bs-toggle="collapse"
-                        href="#info1"
-                        role="button">
-                        Info 1</a>
-                    <a class="btn btn-primary"
-                        data-bs-toggle="collapse"
-                        href="#info2"
-                        role="button">
-                        Info 2</a>
-                    <button
-                        class="btn btn-primary"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target=".multi-collapse">
-                        Info 1 e Info 2
-                    </button>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo Card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<style>
+    .desfoque {
+        filter: blur(5px);
+    }
+
+    img {
+        opacity: 0.6;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="container mt-5 p-5 row">
+        <div class="mt-0 col">
+            <div class="py-3">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#info1" role="button">
+                    Info 1</a>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#info2" role="button">
+                    Info 2</a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target=".multi-collapse">
+                    Info 1 e Info 2
+                </button>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="collapse multi-collapse" id="info1">
+
+                        <div class="card card-body">
+                            Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Cupiditate a alias laboriosam
+                            inventore ducimus earum rerum expedita, mollitia
+                            dignissimos quam.
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div
-                            class="collapse multi-collapse"
-                            id="info1">
+                <div class="col-sm-6">
+                    <div class="collapse multi-collapse" id="info2">
 
-                            <div class="card card-body">
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Cupiditate a alias laboriosam
-                                inventore ducimus earum rerum expedita, mollitia
-                                dignissimos quam.
-                            </div>
+                        <div>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Sequi sint nemo asperiores
+                            odit inventore iusto reprehenderit temporibus
+                            ullam labore? Eos nihil vitae, corporis sint
+                            assumenda optio maiores accusantium temporibus
+                            consectetur alias quisquam id, odio repudiandae!
+                            Dolores a velit modi adipisci.
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div
-                            class="collapse multi-collapse"
-                            id="info2">
-
-                            <div>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Sequi sint nemo asperiores
-                                odit inventore iusto reprehenderit temporibus
-                                ullam labore? Eos nihil vitae, corporis sint
-                                assumenda optio maiores accusantium temporibus
-                                consectetur alias quisquam id, odio repudiandae!
-                                Dolores a velit modi adipisci.
-                            </div>
-                        </div>
-                    </div>
-                   <div id="card1" class="border w-75 mt-4">
-                     <img
-                        src="/images/user.jpg"
-                        class="card-img-bottom w-25"
-                        alt="Card User" />
+                </div>
+                <div id="card1" class="border w-75 mt-4">
+                    <img src="/images/user.jpg" class="card-img-bottom w-25" alt="Card User" />
                     <p class="mt-3">
                         Lorem, ipsum dolor sit amet consectetur adipisicing
                         elit. Necessitatibus amet praesentium, voluptatem
@@ -84,78 +69,82 @@
                         Corporis illum harum vitae omnis quidem. Quo blanditiis
                         nisi, qui eaque odit, ipsa molestiae eveniet repellat
                         expedita dolore aspernatur porro?
-                    </p>    
-                   </div>
+                    </p>
                 </div>
             </div>
-            <div class="mt-0 col-sm-4">
-                <section>
-                    <h2 id="infoTxt">Aprecie nosso espeto de vegetais</h2>
-                    <article>
-                        <img
-                            src="../images/vegetable-skewer-3317060_1280.jpg"
-                            width="600"
-                            id="img-1"
-                            alt="itens selecionados"/>
-                            <!-- <img src="/images/baked-salmon-garnished-with-asparagus-and-tomatoes-with-herbs.jpg" alt=""> -->
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Tempore saepe iusto architecto, ducimus
-                            repellendus sapiente a quaerat dolorum accusamus
-                            laborum! Ipsum sequi amet ab accusamus quas maiores
-                            debitis possimus non a! Sapiente, reiciendis
-                            nesciunt, corrupti sequi ex quia molestiae minus,
-                            error molestias eius quas illo? Officia optio vitae
-                            laboriosam ad aliquid vero culpa illum! Vel
-                            laudantium ea illum cumque. Corrupti eum error
-                            perferendis ed quae architecto odio alias natus at
-                            assumenda nobis blanditiis obcaecati totam.
-                        </p>
-                    </article>
-                </section>
-            </div>
         </div>
+        <div class="mt-0 col-sm-4">
+            <section>
+                <h2 id="infoTxt">Aprecie nosso espeto de vegetais</h2>
+                <article>
+                    <img src="../images/vegetable-skewer-3317060_1280.jpg" width="600" id="img-1"
+                        alt="itens selecionados" />
+                    <!-- <img src="/images/baked-salmon-garnished-with-asparagus-and-tomatoes-with-herbs.jpg" alt=""> -->
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Tempore saepe iusto architecto, ducimus
+                        repellendus sapiente a quaerat dolorum accusamus
+                        laborum! Ipsum sequi amet ab accusamus quas maiores
+                        debitis possimus non a! Sapiente, reiciendis
+                        nesciunt, corrupti sequi ex quia molestiae minus,
+                        error molestias eius quas illo? Officia optio vitae
+                        laboriosam ad aliquid vero culpa illum! Vel
+                        laudantium ea illum cumque. Corrupti eum error
+                        perferendis ed quae architecto odio alias natus at
+                        assumenda nobis blanditiis obcaecati totam.
+                    </p>
+                </article>
+            </section>
+        </div>
+    </div>
 
-        <!-- MODAL EXEMPLO -->
-        <div class="modal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title"></h2>
-                        <button
-                            type="button"
-                            class="btn-close btn-footer"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                        ></button>
+    <!-- MODAL EXEMPLO -->
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"></h2>
+                    <button type="button" class="btn-close btn-footer" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- INÍCIO DO CONTEÚDO -->
+                    <h3></h3>
+                    <div>
+                        <hr />
+                        <h5></h5>
+                        <hr />
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <hr />
+                        <p>Vou te responder o mais breve possível!</p>
                     </div>
-                    <div class="modal-body">
-                        <!-- INÍCIO DO CONTEÚDO -->
-                        <h3></h3>
-                        <div>
-                            <hr />
-                            <h5></h5>
-                            <hr />
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <hr />
-                            <p>Vou te responder o mais breve possível!</p>
-                        </div>
-                        <!-- FINAL DO CONTEÚDO -->
-                    </div>
-                    <div class="modal-footer">
-                        <button
-                            type="button"
-                            class="btn btn-secondary btn-footer"
-                            data-bs-dismiss="modal"
-                        >
-                            Fechar
-                        </button>
-                    </div>
+                    <!-- FINAL DO CONTEÚDO -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-footer" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
+<script>
+    // Aplicando um Componente Collapse BootStrap
+    $().ready(function () {
+        $('#info1').on('show.bs.collapse', function () {
+            $('#card1').toggleClass('border')
+            $('#card1').css({ 'border': '5px dashed red' })
+        })
+        $('#info2').on('hidden.bs.collapse', function () {
+            $('#img-1').attr('src', '/images/baked-salmon-garnished-with-asparagus-and-tomatoes-with-herbs.jpg')
+            $('#infoTxt').html('Venha saborear o nosso Salmão!')
+        })
+
+    })
+</script>
 
 </html>

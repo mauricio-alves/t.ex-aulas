@@ -1,105 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo Card</title>
-      <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <style>
-    .desfoque{
-        filter:blur(5px)
+    .desfoque {
+        filter: blur(5px)
     }
-    img{
-        opacity:0.2
+
+    img {
+        opacity: 0.2
     }
 </style>
+
 <body>
     <div class="container mt-5 p-5 row">
-    <div class="mt-5 col">
-        <h2>João Developer</h2>
-        <p>Descrição</p>
-        <div class="card" style="width:400px;">
-            <img src="/images/user.jpg" class="card-img-top w-50" alt="Card User">
-            <div class="card-header">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, praesentium!
-            </div>
-            <div class="card-body">
-                <h4 class="card-title">Lorem Ipsum</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, architecto.</p>
-                <a href="#" class="btn btn-info">Veja meu perfil no Linkedin</a>
-            </div>
-            <div class="card-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eveniet veritatis, deserunt dolore praesentium quidem nam laudantium, tempora perspiciatis, aperiam odit cupiditate nobis sapiente voluptas. Ex corrupti minima non expedita?</div>
-        </div>
-    </div>
-
-     <div class="mt-0 col">
-        <h2>Beatrix UX</h2>
-        <p>Descrição</p>
-               <div class="card destaque" style="width:400px;">
-            
-            <div class="card-header">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, praesentium!
-            </div>
-            <div class="card-body">
-                <h4 class="card-title">Lorem Ipsum</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, architecto.</p>
-                <a href="#" class="btn btn-info">Veja meu perfil no Linkedin</a>
-                  <img src="/images/user.jpg" class="card-img-bottom w-50 img-avatar-1" id="avatar_1" alt="Card User">
-            <a href="#" id="btnSaibaMais">Entre em contato</a>
-            <form>
-                <div>
-                    <input type="radio" name="assunto" checked id="optPalestras" value="Palestras"> Palestras
-                    <input type="radio" name="assunto" id="optProjeto" value="Projeto"> Projeto
-                    <input type="radio" name="assunto" id="optConsultoria"value="Consultoria"> Consultoria
+        <div class="mt-5 col">
+            <h2>João Developer</h2>
+            <p>Descrição</p>
+            <div class="card" style="width:400px;">
+                <img src="/images/user.jpg" class="card-img-top w-50" alt="Card User">
+                <div class="card-header">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, praesentium!
                 </div>
-                <input type="text" class="mt-2" id="nome" placeholder="Seu nome">
-                <input type="text"  class="mt-2" id="email" placeholder="Seu melhor email">
-                <textarea name="" id="contato" cols="30" rows="5" class="mt-2" placeholder="Sua mensagem"></textarea>
-                <button type="button" class="btn btn-light border" id="btnContato">Enviar</button>
-            </form> 
+                <div class="card-body">
+                    <h4 class="card-title">Lorem Ipsum</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, architecto.</p>
+                    <a href="#" class="btn btn-info">Veja meu perfil no Linkedin</a>
+                </div>
+                <div class="card-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eveniet
+                    veritatis, deserunt dolore praesentium quidem nam laudantium, tempora perspiciatis, aperiam odit
+                    cupiditate nobis sapiente voluptas. Ex corrupti minima non expedita?</div>
             </div>
-            <div class="card-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eveniet veritatis, deserunt dolore praesentium quidem nam laudantium, tempora perspiciatis, aperiam odit cupiditate nobis sapiente voluptas. Ex corrupti minima non expedita?</div>
         </div>
-                  
-    </div>
 
-    <!-- MODAL EXEMPLO -->
-<div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title"></h2>
-                <button type="button" class="btn-close btn-footer" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="mt-0 col">
+            <h2>Beatrix UX</h2>
+            <p>Descrição</p>
+            <div class="card destaque" style="width:400px;">
+
+                <div class="card-header">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, praesentium!
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Lorem Ipsum</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, architecto.</p>
+                    <a href="#" class="btn btn-info">Veja meu perfil no Linkedin</a>
+                    <img src="/images/user.jpg" class="card-img-bottom w-50 img-avatar-1" id="avatar_1" alt="Card User">
+                    <a href="#" id="btnSaibaMais">Entre em contato</a>
+                    <form>
+                        <div>
+                            <input type="radio" name="assunto" checked id="optPalestras" value="Palestras"> Palestras
+                            <input type="radio" name="assunto" id="optProjeto" value="Projeto"> Projeto
+                            <input type="radio" name="assunto" id="optConsultoria" value="Consultoria"> Consultoria
+                        </div>
+                        <input type="text" class="mt-2" id="nome" placeholder="Seu nome">
+                        <input type="text" class="mt-2" id="email" placeholder="Seu melhor email">
+                        <textarea name="" id="contato" cols="30" rows="5" class="mt-2"
+                            placeholder="Sua mensagem"></textarea>
+                        <button type="button" class="btn btn-light border" id="btnContato">Enviar</button>
+                    </form>
+                </div>
+                <div class="card-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eveniet
+                    veritatis, deserunt dolore praesentium quidem nam laudantium, tempora perspiciatis, aperiam odit
+                    cupiditate nobis sapiente voluptas. Ex corrupti minima non expedita?</div>
             </div>
-            <div class="modal-body">
-              <!-- INÍCIO DO CONTEÚDO -->
-                   <h3></h3>
-                   <div>
-                    <hr />
-                    <h5></h5>
-                    <hr />
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <hr />
-                    <p>Vou te responder o mais breve possível!</p>
-                   </div>
-              <!-- FINAL DO CONTEÚDO -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-footer" data-bs-dismiss="modal">Fechar</button>
-              
+
+        </div>
+
+        <!-- MODAL EXEMPLO -->
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"></h2>
+                        <button type="button" class="btn-close btn-footer" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- INÍCIO DO CONTEÚDO -->
+                        <h3></h3>
+                        <div>
+                            <hr />
+                            <h5></h5>
+                            <hr />
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <hr />
+                            <p>Vou te responder o mais breve possível!</p>
+                        </div>
+                        <!-- FINAL DO CONTEÚDO -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-footer"
+                            data-bs-dismiss="modal">Fechar</button>
+
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-    
+
 </body>
+
+<script>
+    // Identificando o estado Checked de um Input Radio
+    $().ready(function () {
+        $('#btnContato').click(function () {
+            $('.modal').modal('show')
+            $('.modal-body h3').html('Obrigado pelo seu contato!')
+            $('.modal-body p').eq(0).text('Nome: ' + $('#nome').val())
+            $('.modal-body p').eq(1).text('Email: ' + $('#email').val())
+            $('.modal-body p').eq(2).text('Mensagem: ' + $('#contato').val())
+            $('.modal-body h5').html('Quero saber mais sobre: <i>' + $('input[name=assunto]: checked').val() + '</i>')
+        })
+        $('.btn-close').click(function () {
+            $('#nome,#email,#contato').val('')
+            $('input[name=assunto]').eq(0).click()
+        })
+        $('.card').hasClass('destaque') ? $('.img-avatar-1').animate({ 'opacity': '1' }, 5000) : null
+    })
+
+</script>
 
 </html>

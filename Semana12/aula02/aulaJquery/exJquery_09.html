@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Modelo Card</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
-    <style>
-        .desfoque {
-            filter: blur(5px);
-        }
-        img {
-            opacity: 0.6;
-            width: 100%;
-        }
-    </style>
-    <body>
-     <div class="container mt-4">
-       <h2  
-       id="btnConteudo" class="alert alert-warning" style="cursor:pointer">Conheça nossa cozinha!</h2>
-      <div class="conteudo"></div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo Card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<style>
+    .desfoque {
+        filter: blur(5px);
+    }
+
+    img {
+        opacity: 0.6;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="container mt-4">
+        <h2 id="btnConteudo" class="alert alert-warning" style="cursor:pointer">Conheça nossa cozinha!</h2>
+        <div class="conteudo"></div>
 
     </div>
-    </body>
+</body>
+
+<script>
+    // Carregando um Arquivo Externo - Método GET
+    $().ready(function () {
+        $('#btnConteudo').click(function () {
+            $.get('conteudo.txt', function (data) {
+                $('.conteudo').html(data)
+            })
+        })
+    })
+</script>
+
 </html>
