@@ -1,0 +1,20 @@
+QUINTA-FEIRA - REUNIAO INDIVIDUAL COM PO/SM
+
+RESPONSIVIDADE (celular, tablet e desktop) - media query
+
+testar responsividade no site browserstack.com
+
+tela contato e reservas
+
+PAGINA RESERVA
+2 input date(check-in e check-out) e 1 input number (limitado a 4 pessoas)
+
+3 principais acomodacoes (foto, titulo, descricao, valor e radio button) - so pode clicar em 1 (acende uma borda colorida)
+
+tela lateral - resumo da reserva (por enquanto criar um exemplo estaico) - resumo pode ser position absolute
+xxx - elemento span
+adicionar mais servicos - link
+botao continuar ainda sem funcao
+adicionar o resumo da reserva
+
+tela home - componente cadastre-se eh opcional
