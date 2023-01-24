@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Ex_02</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="app.js" type="module"></script>
+</head>
+
+<style>
+    #app {
+        display: flex;
+        justify-content: center;
+        min-height: 50vh;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        flex-flow: column;
+        border: 1px solid #999;
+    }
+
+    p {
+        font-size: 2.5rem;
+        align-self: center;
+    }
+
+    button {
+        font-size: 2rem
+    }
+
+    a {
+        display: block;
+        font-size: 1.5rem;
+    }
+</style>
+
+<body>
+    <div class="w-50 mx-auto mt-4 px-5" id="app">
+        <div>
+            <a href="/vueJs_ex_1.html">Ex_01</a>
+            <a href="/vueJs_ex_2_no_componentes.html">Ex_02</a>
+            <a href="/vueJs_ex_2a_componentes.html">Ex_03</a>
+            <a href="/vueJs_ex_3_componentes.html">Ex_04</a>
+        </div>
+        <p>{{m2}}</p>
+        <button @click="count++" class="w-25 mx-auto">{{count}}</button>
+        <button v-on:click="multiplicar" class="w-25 mx-auto">{{n}}</button>
+    </div>
+</body>
+
+</html>
