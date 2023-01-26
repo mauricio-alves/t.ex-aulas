@@ -7,7 +7,13 @@
     alt="Penne ao Sugo"
   /> -->
   <div class="border p-3 mb-5">
-    <img class="w-50" :src="urlImage" :alt="altImage" />
+    <img
+      class="w-50"
+      :src="urlImage"
+      :alt="altImage"
+      data-bs-toggle="modal"
+      data-bs-target="#modalVue"
+    />
     <h4 class="py-3">{{ altImage }}</h4>
     <ButtonImage @trocarImagem="handleSwitchImage" />
   </div>
@@ -41,5 +47,9 @@ export default {
 <style scoped>
 a {
   color: steelblue;
+}
+
+img {
+  cursor: pointer;
 }
 </style>

@@ -1,5 +1,5 @@
 {
-  "name": "projeto_spa",
+  "name": "meu-projeto-vue-bootstrap",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
     "core-js": "^3.8.3",
     "vue": "^3.2.13"
   },
