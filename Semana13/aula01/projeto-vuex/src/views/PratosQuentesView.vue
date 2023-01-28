@@ -8,13 +8,13 @@
 import ItemProduto from "@/components/ItemProduto.vue";
 
 export default {
-  name: "SobremesasView",
+  name: "PratosQuentesView",
   components: {
     ItemProduto,
   },
   data() {
     return {
-      category: "sobremesas",
+      category: "pratosQuentes",
     };
   },
   // Exemplo de uso de props para consumir dados
