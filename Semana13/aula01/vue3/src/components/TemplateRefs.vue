@@ -9,6 +9,7 @@
 </template>
 
 <script>
+// Option API
 export default {
   name: "TemplateRefs",
   props: {

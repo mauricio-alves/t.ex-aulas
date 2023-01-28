@@ -1,26 +1,24 @@
 <template>
-  <TemplateRefs msg="Exemplo: Template Refs"/>
+  <TemplateRefs msg="Exemplo: Template Refs" />
   <hr />
-  <!-- <TemplateRefsVfor /> -->
+  <TemplateRefsVfor />
   <hr />
-  <!-- <OptionAPI /> -->
-
+  <OptionAPI />
 </template>
 
 <script>
-// import OptionAPI from './components/OptionAPI.vue'
-import TemplateRefs from './components/TemplateRefs.vue'
-// import TemplateRefsVfor from './components/TemplateRefsVfor.vue'
-
+import OptionAPI from './components/OptionAPI.vue'
+import TemplateRefs from "./components/TemplateRefs.vue";
+import TemplateRefsVfor from "./components/TemplateRefsVfor.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     TemplateRefs,
-    // TemplateRefsVfor,
-    // OptionAPI
-  }
-}
+    TemplateRefsVfor,
+    OptionAPI
+  },
+};
 </script>
 
 <style>
