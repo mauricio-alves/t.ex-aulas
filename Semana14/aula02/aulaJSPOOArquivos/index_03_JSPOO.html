@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS CLASS</title>
+</head>
+
+<body>
+    <h2>Utilizando a palavra-chave <code>class</code></h2>
+</body>
+<script>
+    class Carrinho {
+        desconto = 5
+        constructor() {
+            //
+        }
+        aplicaDesconto(desconto) {
+            return this.desconto = !desconto ? this.desconto : desconto
+        }
+    }
+
+    class Cupom extends Carrinho {
+        constructor(desconto) {
+            super(desconto)
+        }
+        aplicaDesconto(desconto) {
+            return this.desconto = this.desconto + desconto
+        }
+    }
+
+    let carrinho = new Carrinho()
+    // carrinho.aplicaDesconto(10)
+    console.log(`O desconto padrão é de: ${carrinho.aplicaDesconto()}%`)
+
+    let cupom = new Cupom()
+    // console.log(cupom)
+    console.log(`O desconto do cupom é de: ${cupom.aplicaDesconto(8)}%`)
+</script>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Adm - Cadastro de Produtos</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        />
+       <script src="/src/assets/js/main_lista.js" type="module"></script>
+    </head>
+    <style>
+
+        .cursor,
+        .boxListagem_item div:nth-of-type(4),
+        .boxListagem_head div:nth-of-type(4){
+            display: none;
+        }
+
+        a{
+            color:brown;
+        }
+
+    </style>
+    <body>
+        <header class="text-left mt-5 mx-5 px-5">
+            <h2>Listagem de Produtos</h2>
+            <span>Verifique os produtos inseridos antes de publicar</span>
+        </header>
+        <main>
+             
+          
+            <div class="boxListagem container mt-5 mx-auto">
+                 <p><a href="index.html">Inserir um novo produto</a></p>
+                <div class="w-100 boxListagem__info">
+                <div class="boxListagem_head d-flex w-100">
+                    <div class="w-25 border px-3">ID</div>
+                    <div class="w-25 border px-3">Produto</div>
+                    <div class="w-25 border px-3">Valor</div>
+                    <div class="w-25 border px-3"></div>
+                </div>
+            </div>
+            <form></form>
+        </main>
+        <footer></footer>
+    </body>
+</html>
