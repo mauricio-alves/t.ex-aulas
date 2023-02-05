@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>JS CLASS</title>
-    </head>
-    <body>
-        <h2>Utilizando a palavra-chave <code>class</code></h2>
-    </body>
-    <script>
-        const caneta = {
-            cor:'Azul',
-            escrever(){
-                console.log('Ponteiro acionado')
-            },
-            assinar(nome){
-                console.log(`Atenciosamente, ${nome}`)
-            }
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS CLASS</title>
+</head>
+
+<body>
+    <h2>Utilizando a palavra-chave <code>class</code></h2>
+</body>
+<script>
+    const caneta = {
+        cor: 'Azul',
+        escrever() {
+            console.log('Ponteiro acionado')
+        },
+        assinar(nome) {
+            console.log(`Atenciosamente, ${nome}`)
         }
+    }
 
-        function Pessoa (nome){
-            return this.nome = nome
-        }
-        // construtores
+    function Pessoa(nome) {
+        return this.nome = nome
+    }
+    
+    // construtores
 
-       let canetaTinteiro = Object.create(caneta)
-        canetaTinteiro.escrever()
-       
-        let canetaMontBlank = Object.assign(Pessoa.prototype,caneta)
-       canetaMontBlank.assinar('Roque Fernando')
+    let canetaTinteiro = Object.create(caneta)
+    canetaTinteiro.escrever()
 
-       let cliente = new Pessoa('Robert Stevens')
-       console.log(`Olá sou o cliente  ${JSON.stringify(cliente.nome)}`)
-    </script>
+    let canetaMontBlank = Object.assign(Pessoa.prototype, caneta)
+    canetaMontBlank.assinar('Roque Fernando')
+
+    let cliente = new Pessoa('Robert Stevens')
+    console.log(`Olá sou o cliente  ${JSON.stringify(cliente.nome)}`)
+</script>
 
 </html>
